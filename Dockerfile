@@ -29,13 +29,14 @@ RUN mkdir /spid-testenvironment && \
     tar -zxvf /spid-testenvironment/spid-testenv-identityserver.tar.gz -C /spid-testenvironment/is --strip-components=1 && \
     rm -f /spid-testenvironment/spid-testenv-identityserver.tar.gz && \
     mv /conf/conf/carbon.xml /spid-testenvironment/is/identity-server/repository/conf/ && \
+    mv /conf/axis2/axis2.xml /spid-testenvironment/is/identity-server/repository/conf/axis2/ && \
     mv /spid-testenvironment/is/spid-confs/conf/conf/claim-config.xml /spid-testenvironment/is/identity-server/repository/conf/ && \
     mv /spid-testenvironment/is/spid-confs/conf/bin/wso2server.sh /spid-testenvironment/is/identity-server/bin/ && \
     chown -R yoda:yoda /spid-testenvironment/* && \
     chmod +x /spid-testenvironment/is/identity-server/bin/wso2server.sh
 
 # Port exposed
-EXPOSE 443
+EXPOSE 9443
 USER yoda
 
 # Start & Stop to bootstrap the Identity Server
