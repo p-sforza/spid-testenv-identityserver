@@ -285,7 +285,7 @@
        Uncomment the following to enable any proxy like Apache2 mod_proxy or any load balancer. The port on a proxy server like Apache is 443
        in this case.
         -->
-        <!--<parameter name="proxyPort">443</parameter>-->
+        <parameter name="proxyPort">443</parameter>
     </transportReceiver>
 
     <!--
