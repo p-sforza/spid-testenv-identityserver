@@ -35,7 +35,7 @@ RUN mkdir /spid-testenvironment && \
     chmod +x /spid-testenvironment/is/identity-server/bin/wso2server.sh
 
 # Port exposed
-EXPOSE 9443
+EXPOSE 443
 USER yoda
 
 # Start & Stop to bootstrap the Identity Server
